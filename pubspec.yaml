@@ -1,0 +1,21 @@
+name: department_app
+description: Department app with login/signup, instructor calling, classroom images with double-tap enlarge, and 4 tabs.
+publish_to: "none"
+version: 1.1.0+2
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: ^2.3.2
+  url_launcher: ^6.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
