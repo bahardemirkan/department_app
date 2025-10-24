@@ -8,9 +8,11 @@ Setup Instructions
    cd department_app_flutter_v2
 
 2. Install dependencies
+
    flutter pub get
 
 3. Run the app
+
    flutter run
 
 # Department App (Flutter)
