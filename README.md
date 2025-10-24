@@ -4,6 +4,7 @@ Emine Nur Güçlü
 Setup Instructions
 1. Clone the repository
    git clone https://github.com/bahardemirkan/department_app.git
+   
    cd department_app_flutter_v2
 
 2. Install dependencies
