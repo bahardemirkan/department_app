@@ -116,14 +116,3 @@ For Android, make sure the following permission is added in:
 ```
 
 ---
-
-## Authors
-
-- Bahar Demirkan — 29150082018  
-- Emine Nur Güçlü  
-
----
-
-## License
-
-This project is open source and available under the MIT License.
