@@ -16,7 +16,7 @@ class DepartmentApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Department App',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
         useMaterial3: true,
       ),
       home: const LoginPage(),
