@@ -27,6 +27,16 @@ class AuthService {
     return ok;
   }
 
+  static Future<String?> getUsername() async {
+  final prefs = await SharedPreferences.getInstance();
+  return prefs.getString(_kUsername);
+}
+
+static Future<String?> getPassword() async {
+  final prefs = await SharedPreferences.getInstance();
+  return prefs.getString(_kPassword);
+}
+
   static Future<void> logout() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool(_kLoggedIn, false);

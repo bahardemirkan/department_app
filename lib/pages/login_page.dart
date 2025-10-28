@@ -3,6 +3,7 @@ import '../services/auth_service.dart';
 import 'signup_page.dart';
 import 'home_page.dart';
 
+
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -15,6 +16,7 @@ class _LoginPageState extends State<LoginPage> {
   final _userCtrl = TextEditingController();
   final _passCtrl = TextEditingController();
   bool _hasAccount = false;
+  bool _isPasswordVisible = false; // <-- 1. DEĞİŞİKLİK (EKLENDİ)
 
   @override
   void initState() {
@@ -87,10 +89,23 @@ class _LoginPageState extends State<LoginPage> {
                       const SizedBox(height: 12),
                       TextFormField(
                         controller: _passCtrl,
-                        obscureText: true,
-                        decoration: const InputDecoration(
+                        obscureText: !_isPasswordVisible, 
+                        
+                        decoration: InputDecoration( 
                           labelText: 'Password',
                           border: OutlineInputBorder(),
+                          
+                          suffixIcon: IconButton(
+                            icon: Icon(
+                              _isPasswordVisible ? Icons.visibility : Icons.visibility_off,
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                _isPasswordVisible = !_isPasswordVisible;
+                              });
+                            },
+                          ),
+                          // --- EKLENEN BÖLÜM SONU ---
                         ),
                         validator: (v) => (v == null || v.isEmpty) ? 'Enter password' : null,
                       ),

@@ -3,6 +3,7 @@ import 'people_page.dart';
 import 'infrastructure_page.dart';
 import 'about_page.dart';
 import 'courses_page.dart';
+import 'login_page.dart'; // <-- Bunu eklemeyi unutma
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -24,8 +25,23 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Department App')),
+      appBar: AppBar(
+        title: const Text('Department App'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const LoginPage()),
+              );
+            },
+          )
+        ],
+      ),
+
       body: _pages[_index],
+
       bottomNavigationBar: NavigationBar(
         selectedIndex: _index,
         onDestinationSelected: (i) => setState(() => _index = i),
