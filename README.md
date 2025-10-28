@@ -58,7 +58,7 @@ It’s developed entirely using Flutter and Dart, leveraging Material Design, lo
   - Works on Android/iOS via `url_launcher`.
 
 ### Infrastructure
-- Lists classrooms (Classroom-B1 to Classroom-B7).
+- Lists classrooms (Classroom-B1 to Classroom-B6).
 - Each classroom is shown as a card with its name.
 - When double-tapped, a new page opens showing the full-sized classroom image from the internet.
 
