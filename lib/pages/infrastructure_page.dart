@@ -7,35 +7,36 @@ class InfrastructurePage extends StatelessWidget {
   static final _rooms = [
     {
       'code': 'Classroom-B1',
-      'image': 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=2000&q=80',// amfi
-      'thumb': 'https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=320&q=60',
+      'image': 'https://unsplash.com/photos/F8t2VGnI47I/download?force=true&w=2000',
+      'thumb': 'https://unsplash.com/photos/F8t2VGnI47I/download?force=true&w=320',
     },
     {
       'code': 'Classroom-B2',
-      'image': 'https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=2000&q=80', // klasik sınıf
-      'thumb': 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=320&q=60',
+      'image': 'https://unsplash.com/photos/PDRFeeDniCk/download?force=true&w=2000',
+      'thumb': 'https://unsplash.com/photos/PDRFeeDniCk/download?force=true&w=320',
     },
     {
       'code': 'Classroom-B3',
-      'image': 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=2000&q=80', // bilgisayar labı
-      'thumb': 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=320&q=60',
+      'image': 'https://unsplash.com/photos/BWfJvlISbmk/download?force=true&w=2000',
+      'thumb': 'https://unsplash.com/photos/BWfJvlISbmk/download?force=true&w=320',
     },
     {
       'code': 'Classroom-B4',
-      'image': 'https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=2000&q=80', // modern sınıf
-      'thumb': 'https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=320&q=60',
+      'image': 'https://unsplash.com/photos/frGf5WHXzZI/download?force=true&w=2000',
+      'thumb': 'https://unsplash.com/photos/frGf5WHXzZI/download?force=true&w=320',
     },
     {
       'code': 'Classroom-B5',
-      'image': 'https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=2000&q=80', // beyaz tahtalı sınıf
-      'thumb': 'https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=320&q=60',
+      'image': 'https://unsplash.com/photos/2uX_7L_10rM/download?force=true&w=2000',
+      'thumb': 'https://unsplash.com/photos/2uX_7L_10rM/download?force=true&w=320',
     },
     {
       'code': 'Classroom-B6',
-      'image': 'https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=2000&q=80', // takım çalışma alanı
-      'thumb': 'https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=320&q=60',
+      'image': 'https://unsplash.com/photos/phwRbHF6T8Q/download?force=true&w=2000',
+      'thumb': 'https://unsplash.com/photos/phwRbHF6T8Q/download?force=true&w=320',
     },
   ];
+
 
   @override
   Widget build(BuildContext context) {
