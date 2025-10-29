@@ -3,7 +3,6 @@ import '../services/auth_service.dart';
 import 'signup_page.dart';
 import 'home_page.dart';
 
-
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -15,8 +14,8 @@ class _LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
   final _userCtrl = TextEditingController();
   final _passCtrl = TextEditingController();
-  bool _hasAccount = false;
-  bool _isPasswordVisible = false; // <-- 1. DEĞİŞİKLİK (EKLENDİ)
+  bool _hasAccount = false; // kept for future use, but not hiding Sign Up
+  bool _isPasswordVisible = false; // password toggle
 
   @override
   void initState() {
@@ -78,6 +77,8 @@ class _LoginPageState extends State<LoginPage> {
                       const SizedBox(height: 8),
                       const Text('Please sign in to continue.'),
                       const SizedBox(height: 24),
+
+                      // Username
                       TextFormField(
                         controller: _userCtrl,
                         decoration: const InputDecoration(
@@ -87,42 +88,46 @@ class _LoginPageState extends State<LoginPage> {
                         validator: (v) => (v == null || v.isEmpty) ? 'Enter username' : null,
                       ),
                       const SizedBox(height: 12),
+
+                      // Password with visibility toggle
                       TextFormField(
                         controller: _passCtrl,
-                        obscureText: !_isPasswordVisible, 
-                        
-                        decoration: InputDecoration( 
+                        obscureText: !_isPasswordVisible,
+                        decoration: InputDecoration(
                           labelText: 'Password',
-                          border: OutlineInputBorder(),
-                          
+                          border: const OutlineInputBorder(),
                           suffixIcon: IconButton(
-                            icon: Icon(
-                              _isPasswordVisible ? Icons.visibility : Icons.visibility_off,
-                            ),
-                            onPressed: () {
-                              setState(() {
-                                _isPasswordVisible = !_isPasswordVisible;
-                              });
-                            },
+                            icon: Icon(_isPasswordVisible ? Icons.visibility : Icons.visibility_off),
+                            onPressed: () => setState(() => _isPasswordVisible = !_isPasswordVisible),
                           ),
-                          // --- EKLENEN BÖLÜM SONU ---
                         ),
                         validator: (v) => (v == null || v.isEmpty) ? 'Enter password' : null,
                       ),
+
                       const SizedBox(height: 16),
+
+                      // Login button
                       FilledButton.icon(
                         icon: const Icon(Icons.login),
                         label: const Text('Login'),
                         onPressed: _handleLogin,
                       ),
+
                       const SizedBox(height: 8),
-                      // if (!_hasAccount)
-                        TextButton(
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (_) => const SignUpPage()));
-                          },
-                          child: const Text('Sign Up'),
-                        ),
+
+                      // Always show Sign Up (no condition)
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text("Don't have an account?"),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (_) => const SignUpPage()));
+                            },
+                            child: const Text('Sign Up'),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
