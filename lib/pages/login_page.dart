@@ -116,7 +116,7 @@ class _LoginPageState extends State<LoginPage> {
                         onPressed: _handleLogin,
                       ),
                       const SizedBox(height: 8),
-                      if (!_hasAccount)
+                      // if (!_hasAccount)
                         TextButton(
                           onPressed: () {
                             Navigator.push(context, MaterialPageRoute(builder: (_) => const SignUpPage()));
