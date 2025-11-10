@@ -106,10 +106,6 @@ dependencies:
 
 ---
 
-## Permissions
-
-For Android, make sure the following permission is added in:
-
 **`android/app/src/main/AndroidManifest.xml`**
 ```xml
 <uses-permission android:name="android.permission.CALL_PHONE" />
